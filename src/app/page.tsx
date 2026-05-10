@@ -1,6 +1,7 @@
-import { ArchiveIcon } from "lucide-react"
+import { ArchiveIcon, MessageCircleIcon, ThumbsUp } from "lucide-react"
 
 import { Section } from "@/components/section"
+import { Card } from "@/components/card"
 
 export default function Home() {
   return (
@@ -20,11 +21,30 @@ export default function Home() {
 
           {/* CONTENT */}
           <Section.Content>
-            <div className="h-20 rounded-lg bg-navy-700" />
-            <div className="h-20 rounded-lg bg-navy-700" />
-            <div className="h-20 rounded-lg bg-navy-700" />
-            <div className="h-20 rounded-lg bg-navy-700" />
-            <div className="h-20 rounded-lg bg-navy-700" />
+            <Card.Root>
+              <Card.Header>
+                <Card.Number>ECO-001</Card.Number>
+                <Card.Title>Implementar cartão de crédito</Card.Title>
+              </Card.Header>
+
+              <Card.Footer>
+                <button
+                  type="button"
+                  className="flex items-center gap-2 rounded-lg bg-navy-600 px-2.5 py-1 text-navy-100"
+                >
+                  <ThumbsUp className="size-3" />
+                  <span className="text-sm">12</span>
+                </button>
+
+                <button
+                  type="button"
+                  className="flex items-center gap-2 rounded-lg bg-navy-600 px-2.5 py-1 text-navy-100"
+                >
+                  <MessageCircleIcon className="size-3" />
+                  <span className="text-sm">6</span>
+                </button>
+              </Card.Footer>
+            </Card.Root>
           </Section.Content>
         </Section.Root>
       </main>
