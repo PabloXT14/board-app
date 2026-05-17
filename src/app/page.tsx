@@ -2,6 +2,7 @@ import { ArchiveIcon, MessageCircleIcon, ThumbsUp } from "lucide-react"
 
 import { Section } from "@/components/section"
 import { Card } from "@/components/card"
+import { Button } from "@/components/button"
 
 export default function Home() {
   return (
@@ -28,21 +29,15 @@ export default function Home() {
               </Card.Header>
 
               <Card.Footer>
-                <button
-                  type="button"
-                  className="flex items-center gap-2 rounded-lg bg-navy-600 px-2.5 py-1 text-navy-100"
-                >
+                <Button>
                   <ThumbsUp className="size-3" />
                   <span className="text-sm">12</span>
-                </button>
+                </Button>
 
-                <button
-                  type="button"
-                  className="flex items-center gap-2 rounded-lg bg-navy-600 px-2.5 py-1 text-navy-100"
-                >
+                <Button>
                   <MessageCircleIcon className="size-3" />
                   <span className="text-sm">6</span>
-                </button>
+                </Button>
               </Card.Footer>
             </Card.Root>
           </Section.Content>

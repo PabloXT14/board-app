@@ -9,6 +9,8 @@ const CardRoot = ({ className, ...rest }: CardRootProps) => {
       href="/"
       className={twMerge(
         "block space-y-4 rounded-lg border-[0.5px] border-navy-600 bg-navy-700 p-3",
+        "transition-colors duration-150 hover:border-navy-500 hover:bg-navy-600/50",
+        "outline-none focus-visible:ring-2 focus-visible:ring-navy-400 focus-visible:ring-offset-2 focus-visible:ring-offset-navy-950",
         className,
       )}
       {...rest}
