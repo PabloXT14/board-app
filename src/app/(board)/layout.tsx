@@ -1,3 +1,5 @@
+import { Header } from "./header"
+
 export default function BoardLayout({
   children,
 }: Readonly<{
@@ -5,10 +7,7 @@ export default function BoardLayout({
 }>) {
   return (
     <div className="mx-auto flex h-dvh w-full max-w-412.5 flex-col gap-8 p-10">
-      {/* HEADER */}
-      <header>
-        <h1 className="font-bold text-2xl">Board</h1>
-      </header>
+      <Header />
 
       {children}
     </div>
