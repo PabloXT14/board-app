@@ -4,7 +4,16 @@ import { Section } from "@/components/section"
 import { Card } from "@/components/card"
 import { Button } from "@/components/button"
 
-export default function Home() {
+type BoardProps = {
+  searchParams: Promise<{
+    q?: string
+  }>
+}
+
+export default async function Board({ searchParams }: BoardProps) {
+  const { q } = await searchParams
+  console.log("Search query:", q)
+
   return (
     <main className="grid flex-1 grid-cols-4 items-stretch gap-5">
       {/* BACKLOG */}
